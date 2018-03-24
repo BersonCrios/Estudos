@@ -1,0 +1,13 @@
+$colors: (
+  color1: #6f96de,
+  color2:#81f0b0,
+    color3: #f46060,
+);
+
+
+@each $cor-nome, $cor in $colors {
+  .card-#{$cor-nome} {
+    padding-left: 1rem;
+    background-color: $cor;
+  }
+}

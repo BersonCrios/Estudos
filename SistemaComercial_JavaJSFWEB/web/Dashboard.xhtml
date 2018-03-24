@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>SGC - INICIO</title>
+        <!--Folhas de estilo--> 
+        <h:outputStylesheet library="bootstrap" name="bootstrap.css"/>
+        <h:outputStylesheet library="fontawesome" name="font-awesome.css"/>
+        <h:outputStylesheet library="jasny" name="jasny-bootstrap.css"/>
+        <h:outputStylesheet library="Berson" name="estilo.css"/>
+
+        <!--Fontes-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"></link> 
+
+        <!--Sripts-->
+        <h:outputScript library="jquery" name="jquery-3.1.1.min.js"/>
+        <h:outputScript library="jquery" name="jquery.mask.js"/>
+        <h:outputScript library="jasny" name="jasny-bootstrap.js"/>
+        <h:outputScript library="Berson" name="BersonScript.js"/>
+    </h:head>
+    <h:body>     
+            <ui:include src="_menu.xhtml"></ui:include>        
+        
+                <p class="msgnInicio">SEJA BEM VINDO AO SISTEMA DE GESTÃO COMERCIAL - SGC</p>
+         
+            <ui:include src="_footer.xhtml"></ui:include>     
+            
+    </h:body>
+</html>
+

@@ -1,0 +1,55 @@
+
+
+
+
+fon {
+	color: white;
+	font-size: 19px;
+} 	
+
+fon2{
+	text-transform:uppercase;
+	font-size: 19px;
+	display: inline-block;
+	background-color:#e6ffff;
+	padding:3px;
+	list-style:none;
+	top: -20px;
+	left: 300px;
+}
+
+
+#footer {
+    height: 10%;
+    background-color: gray;
+    border-radius: 5px;
+    clear: both;
+}
+
+ table
+   {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse:collapse;
+      }
+      table td, th
+      {
+        border:1px solid #2424FF;
+		
+      }
+      table th
+      {
+        text-align:left;
+        background-color:#2E82FF;
+        color:#fff;
+      }
+	  
+      table tr.alt td
+      {
+        color:#000;
+        background-color:#D6EDFF;
+      }
+	  
+.botao{
+float:right
+}
+

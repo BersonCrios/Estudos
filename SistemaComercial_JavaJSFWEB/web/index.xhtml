@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>SGC - LOGIN</title>
+        <!--Folhas de estilo--> 
+        <h:outputStylesheet library="bootstrap" name="bootstrap.css"/>
+        <h:outputStylesheet library="fontawesome" name="font-awesome.css"/>
+        <h:outputStylesheet library="jasny" name="jasny-bootstrap.css"/>
+        <h:outputStylesheet library="Berson" name="EstiloLogin.css"/>
+        
+        <!--Fontes-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"></link> 
+        
+        <!--Sripts-->
+        <h:outputScript library="jquery" name="jquery-3.1.1.min.js"/>
+        <h:outputScript library="jquery" name="jquery.mask.js"/>
+        <h:outputScript library="Berson" name="BersonScript.js"/>
+    </h:head>
+
+    <h:body>
+        <h:form class="topo">
+            <p class="nomeEstabelecimento">Supermercado Berson</p> 
+            <p class="sloganEstabelecimento">Preço bom todo dia</p>
+        </h:form>
+
+        <h:form class="Login-form form-group ">            
+            <p><strong>Dados de Acesso</strong></p>
+            <h:inputText class="form-control cpf" required="true" requiredMessage="Campo [CPF] Obrigatório" a:placeholder="CPF" value="#{funcionarioController.funcionario.cpf}"/>
+            
+            <h:inputSecret class="form-control" required="true" requiredMessage="Campo [SENHA] Obrigatório" a:placeholder="SENHA" value="#{funcionarioController.funcionario.senha}"/>
+            <h:commandButton class="btn btn-primary btn-block" value="Entrar" action="#{funcionarioController.login()}"/>
+        </h:form>
+        
+            <h:messages class="alert alert-danger" /> 
+   
+                    <ui:include src="_footer.xhtml"></ui:include>     
+
+    </h:body>
+</html>
+

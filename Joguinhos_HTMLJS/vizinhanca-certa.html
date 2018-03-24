@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+  <head>
+    <title>Vizinhança Certa - Baseado no City Bloxx Mobile &#153;</title>
+    <meta name="author" content="Gabriel Barros | www.gabrielbarros.com.br" />
+    
+    <style type="text/css">
+      <!--
+      body {
+        font: 13px Tahoma;
+      }
+      table {
+        width: 300px;
+        height: 300px
+      }
+      td {
+        background-color: #EEEFEE;
+        border: solid 3px gray;
+        cursor: pointer
+      }
+      h1 {
+        color: #222583;
+        font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      }
+      #pontos {
+        color: #FF0000;
+        font-family: "Comic Sans MS", "Segoe UI", "Trebuchet MS", sans-serif;
+      }
+      .bloco {
+        border: inset 3px #ABABAB;
+        margin-left: 10px;
+        float: left;
+        width: 50px;
+        height: 50px;
+        display: block
+      }
+      -->
+    </style>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      <!--
+      function ObterCor() {
+        var k = 0;
+        a = new Array();
+        for (i = 0; i <= 6; i++) {
+          a[i] = new Array();
+          for (j = 0; j <= 6; j++) {
+            if (i > 0 && i < 6 && j > 0 && j < 6) {
+              a[i][j] = document.getElementsByTagName("td")[k].style.backgroundColor;
+              k++;
+            }
+            else {
+              a[i][j] = "";
+            }
+          }
+        }
+      }
+      window.onload = ObterCor;
+
+      function MudarCor(i, j, td) {
+        Verificar(td.style.borderLeftColor);
+        switch (td.style.borderLeftColor) {
+          case "red": {
+            td.style.backgroundColor = "red";            
+            break; 
+          }
+          case "green": {
+            td.style.backgroundColor = "green";
+            break;
+          }
+          case "yellow": {
+            td.style.backgroundColor = "yellow";
+            break;
+          }
+          case "blue": {
+            td.style.backgroundColor = "blue";
+            break;
+          }
+        }
+        ObterCor();
+        AtualizarPontuacao(); 
+      }
+      
+      function Testar(i, j, proxima_cor) {
+        cima = a[i - 1][j]; 
+        direita = a[i][j + 1];
+        baixo = a[i + 1][j];
+        esquerda = a[i][j - 1];
+
+        switch (proxima_cor) {
+          case "blue": {
+            return true;
+            break;
+          }
+          case "red": {
+            if (cima == "blue" || direita == "blue" || baixo == "blue" || esquerda == "blue") {
+              return true
+            }
+            else {
+              return false
+            }
+            break;
+          }
+          case "green": {
+            if (cima == "blue" || direita == "blue" || baixo == "blue" || esquerda == "blue") {
+              if (cima == "red" || direita == "red" || baixo == "red" || esquerda == "red") {       
+                return true;
+              }
+            } 
+            break;
+          }
+          case "yellow": {
+            if (cima == "blue" || direita == "blue" || baixo == "blue" || esquerda == "blue") {
+              if (cima == "red" || direita == "red" || baixo == "red" || esquerda == "red") {
+                if (cima == "green" || direita == "green" || baixo == "green" || esquerda == "green") {         
+                  return true;
+                }
+              }
+            } 
+            break;
+          }
+        }
+      }
+      
+      function AtualizarPontuacao() {
+        var pontos = 0;
+        for (i = 1; i < 6; i++) {
+          for (j = 1; j < 6; j++) {
+            cor = new Array();
+            cor[""] = 0;
+            cor["blue"] = 1;
+            cor["red"] = 10;
+            cor["green"] = 100;
+            cor["yellow"] = 1000;
+            pontos += cor[a[i][j]]
+          }
+        }
+        document.getElementById("pontos").innerHTML = pontos;
+      }
+      
+      function Verificar(valor) {
+        var k = 0;
+        for (i = 1; i < 6; i++) {
+          for (j = 1; j < 6; j++) {
+            if (Testar(i, j, valor)) {
+              document.getElementsByTagName("td")[k].style.borderColor = valor;
+            }
+            else {
+              document.getElementsByTagName("td")[k].style.borderColor = "gray";
+            }
+            k++;
+          }
+        }      
+      }
+      //-->
+    </script>
+  
+    <h1>Vizinhança Certa</h1>
+    <span class="bloco" style="background-color: blue" onmouseover="Verificar('blue')">&nbsp;</span>
+    <span class="bloco" style="background-color: red" onmouseover="Verificar('red')">&nbsp;</span>
+    <span class="bloco" style="background-color: green" onmouseover="Verificar('green')">&nbsp;</span>
+    <span class="bloco" style="background-color: yellow" onmouseover="Verificar('yellow')">&nbsp;</span><br /><br /><br /><br />
+    <table cellspacing="5" style="clear: both" summary="jogo">
+      <tr>
+        <td onclick="MudarCor(1, 1, this)">
+        </td>
+        <td onclick="MudarCor(1, 2, this)">
+        </td>
+        <td onclick="MudarCor(1, 3, this)">
+        </td>
+        <td onclick="MudarCor(1, 4, this)">
+        </td>
+        <td onclick="MudarCor(1, 5, this)">
+        </td>
+      </tr>
+      <tr>
+        <td onclick="MudarCor(2, 1, this)">
+        </td>
+        <td onclick="MudarCor(2, 2, this)">
+        </td>
+        <td onclick="MudarCor(2, 3, this)">
+        </td>
+        <td onclick="MudarCor(2, 4, this)">
+        </td>
+        <td onclick="MudarCor(2, 5, this)">
+        </td>
+      </tr>
+      <tr>
+        <td onclick="MudarCor(3, 1, this)">
+        </td>
+        <td onclick="MudarCor(3, 2, this)">
+        </td>
+        <td onclick="MudarCor(3, 3, this)">
+        </td>
+        <td onclick="MudarCor(3, 4, this)">
+        </td>
+        <td onclick="MudarCor(3, 5, this)">
+        </td>
+      </tr>
+      <tr>
+        <td onclick="MudarCor(4, 1, this)">
+        </td>
+        <td onclick="MudarCor(4, 2, this)">
+        </td>
+        <td onclick="MudarCor(4, 3, this)">
+        </td>
+        <td onclick="MudarCor(4, 4, this)">
+        </td>
+        <td onclick="MudarCor(4, 5, this)">
+        </td>
+      </tr>
+      <tr>
+        <td onclick="MudarCor(5, 1, this)">
+        </td>
+        <td onclick="MudarCor(5, 2, this)">
+        </td>
+        <td onclick="MudarCor(5, 3, this)">
+        </td>
+        <td onclick="MudarCor(5, 4, this)">
+        </td>
+        <td onclick="MudarCor(5, 5, this)">
+        </td>
+      </tr>
+    </table><br />
+    PONTOS: <span id="pontos">0</span><br /><br />
+    <button style="cursor: pointer" onclick="javascript:window.location.reload()">Novo jogo</button><br /><br /><br />
+    <span style="font: 19px 'Monotype Corsiva'; color: #789ABC; padding-left: 8px">Baseado no Jogo City Bloxx Mobile &#153;</span>
+  </body>
+</html>

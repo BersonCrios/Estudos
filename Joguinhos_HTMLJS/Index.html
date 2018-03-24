@@ -1,0 +1,75 @@
+<html>
+<style>
+#image{
+	margin-left:50px;
+	margin-top:80px;
+	width:250px;
+	}
+</style>
+<script>
+function vai(id){
+	var target = document.getElementById(id);
+	var dinamico = 0;
+	var inicio = 336; //conforme a largura da imagem que se deseja manipular
+	var limite = (inicio/10);
+	var margem =  (target.offsetLeft - 8);
+	if (navigator.appName.indexOf('Microsoft') != -1)
+		var margem =  (target.offsetLeft - 9.5); // corrigir  diferança de margem do IE
+	
+	var x = setInterval(
+		function(){
+			if (dinamico >= limite){
+				clearInterval(x)
+				volta(id);				
+			}
+			else 
+				move(target, inicio, margem, dinamico);
+				if (navigator.appName.indexOf('Microsoft') != -1){ // corrigir a diferença de tempo do IE pros demais navegadores
+					dinamico += 0.4;
+				}
+				else {
+					dinamico += 0.50;
+				}	
+		}, 1);
+}
+function volta(id){
+	var target = document.getElementById(id);
+	var inicio = 370;
+	var dinamico = 0;
+	var limite = -((inicio/11));
+	var margem =  (target.offsetLeft - 8);
+	if (navigator.appName.indexOf('Microsoft') != -1)
+		var margem =  (target.offsetLeft - 9.5); // corrigir  diferança de margem do IE
+		
+	var x = setInterval(
+		function(){
+			if (dinamico <= limite){
+				clearInterval(x);
+				vai(id);				
+			}
+			else 
+				move(target, inicio, margem, dinamico);// corrigir a diferença de tempo do IE pros demais navegadores
+				if (navigator.appName.indexOf('Microsoft') != -1){
+					dinamico -= 0.15;
+				}
+				else {
+					dinamico -= 0.20;
+				}	
+		}, 1);
+}
+function move(target, inicio, margem, dinamico){
+	target.style.width = inicio + dinamico;
+	target.style.marginLeft = margem - (dinamico/2);
+	target.style.marginTop = margem - (dinamico/2);
+}
+
+</script>
+<body onload="vai('image')">
+<br><br>
+<img id="image" src="heart.gif">
+
+
+</body>
+
+
+</html>

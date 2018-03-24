@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.widget.RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        tools:context="br.com.bersoncrios.relativelayout.MainActivity">
+
+        <TextView
+            android:id="@+id/nomeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelNome"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nomeField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@id/nomeLabel"/>
+
+
+        <!--CPF-->
+        <TextView
+            android:id="@+id/cpfLabel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/labelCpf"
+            android:textStyle="bold"
+            android:layout_below="@id/nomeField"/>
+
+        <EditText
+            android:id="@+id/cpfField"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cpfLabel"
+            android:inputType="text" />
+
+        <!--RG-->
+        <TextView
+            android:id="@+id/rgLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelRg"
+            android:textStyle="bold"
+            android:layout_below="@id/nomeField"
+            android:layout_toRightOf="@id/cpfLabel"/>
+
+        <EditText
+            android:id="@+id/rgField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@id/rgLabel"
+            android:layout_toRightOf="@id/cpfField"/>
+
+
+        <!--ENDEREÇO-->
+        <TextView
+            android:id="@+id/enderecoLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelEndereco"
+            android:textStyle="bold"
+            android:layout_below="@id/cpfField"/>
+
+        <EditText
+            android:id="@+id/enderecoField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@id/enderecoLabel"/>
+
+
+        <!--SEXO-->
+        <TextView
+            android:id="@+id/sexoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/nascimentoLabel"
+            android:text="@string/labelSexo"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioMasculino"
+            android:layout_below="@id/sexoLabel"/>
+
+        <RadioButton
+            android:id="@+id/feminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioFeminino"
+            android:layout_toRightOf="@id/masculino"
+            android:layout_below="@id/sexoLabel"/>
+
+        <!--NASCIMENTO-->
+        <TextView
+            android:id="@+id/nascimentoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnData"
+            android:layout_below="@+id/enderecoField"
+            android:text="@string/labelNascimento"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnData"
+            style="@style/estiloBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/nascimentoLabel"
+            android:text="Data de Nascimento" />
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelCadastrar"
+            android:layout_below="@id/btnData"
+            style="@style/estiloBtnCadastro"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/cadastradosLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastrados"
+            android:layout_below="@id/btnCadastrar"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp"/>
+
+
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cadastradosLabel" />
+    </android.widget.RelativeLayout>
+</ScrollView>

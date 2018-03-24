@@ -1,0 +1,120 @@
+#header {
+   height: 15%;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-radius: 1px;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+        box-sizing: border-box
+}
+
+#logo {
+	height: 100%;
+    width: 75%;
+	float: left;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: gray;
+    border-radius: 5px;
+    clear: both;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+        box-sizing: border-box
+}
+
+#login {
+	height: 100%;
+    width: 25%;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: gray;
+	background: rgb(0, 0, 128) transparent;
+	background: rgba(0, 0, 128, 0.8);
+	float: right;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+        box-sizing: border-box
+}
+
+.left {
+    display: inline-block;
+    height: 79%;
+    width: 15%;
+    margin-top: 1%;
+    background-color: gray;
+    border-radius: 5px;
+    float: left;
+	background: rgb(0, 0, 128) transparent;
+	background: rgba(0, 0, 128, 0.8);
+	/* Para navegadores IE 5.5 - 7 */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000, endColorstr=#000000);
+	/* Para navegadores IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000, endColorstr=#000000)";
+}
+
+#content {
+	display: inline-block;
+    height: 79%;
+    width: 84%;
+	overflow:auto;	
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    float: right;
+	background: rgb(0, 0, 0) transparent;
+	background: rgba(000, 0, 0, 0.8);
+	/* Para navegadores IE 5.5 - 7 */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000, endColorstr=#000000);
+	/* Para navegadores IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000, endColorstr=#000000)";
+	
+}
+
+fon {
+	color: white;
+	font-size: 19px;
+}
+
+fon2{
+	color: red;
+	font-size: 19px;
+}
+
+
+#footer {
+    height: 10%;
+    background-color: gray;
+    border-radius: 5px;
+    clear: both;
+}
+
+ table
+   {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse:collapse;
+      }
+      table td, th
+      {
+        border:1px solid #2424FF;
+		
+      }
+      table th
+      {
+        text-align:left;
+        background-color:#2E82FF;
+        color:#fff;
+      }
+	  
+      table tr.alt td
+      {
+        color:#000;
+        background-color:#D6EDFF;
+      }
+

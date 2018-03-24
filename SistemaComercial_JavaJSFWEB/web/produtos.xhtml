@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Produtos - Inicio</title>
+        <!--Folhas de estilo--> 
+        <h:outputStylesheet library="bootstrap" name="bootstrap.css"/>
+        <h:outputStylesheet library="fontawesome" name="font-awesome.css"/>
+        <h:outputStylesheet library="jasny" name="jasny-bootstrap.css"/>
+        <h:outputStylesheet library="Berson" name="estilo.css"/>
+
+        <!--Fontes-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"></link> 
+
+        <!--Sripts-->
+        <h:outputScript library="jquery" name="jquery-3.1.1.min.js"/>
+        <h:outputScript library="jquery" name="jquery.mask.js"/>
+        <h:outputScript library="Berson" name="BersonScript.js"/>
+    </h:head>
+    <h:body>
+       <ui:include src="_menu.xhtml"></ui:include>
+
+        <h:form class="btn-cadastrar">
+            <h:commandButton class="btn btn-primary btn-berson" value="CADASTRAR" action="CadastroProduto.xhtml"></h:commandButton>
+        </h:form>
+        <h2>PRODUTOS</h2>
+        <h:form class="container-fluid">
+            <h:dataTable var="produto" value="#{produtoController.produtos}" class="table table-striped">
+                <h:column>
+                    <f:facet name="header">Nome</f:facet>
+                    <h:inputText value="#{produto.nome}" size="10" rendered="#{produto.editable}" />
+                    <h:outputText value="#{produto.nome}" rendered="#{not produto.editable}" />
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">id do poroduto</f:facet>
+                    <h:outputText value="#{produto.idproduto}" rendered="#{not produto.editable}"/>
+                </h:column>
+
+                <h:column >
+                    <f:facet name="header">Validade</f:facet>
+                    <h:inputText value="#{produto.validade}" size="10" rendered="#{produto.editable}" />
+                    <h:outputText value="#{produto.validade}" rendered="#{not produto.editable}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Codigo de Barra</f:facet>
+                    <h:inputText value="#{produto.codigoBarra}" size="10" rendered="#{produto.editable}" />
+                    <h:outputText value="#{produto.codigoBarra}" rendered="#{not produto.editable}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Preço</f:facet>
+                    <h:inputText value="#{produto.preco}" size="10" rendered="#{produto.editable}" />
+                    <h:outputText value="#{produto.preco}" rendered="#{not produto.editable}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Quantidade  em estoque</f:facet>
+                    <h:inputText value="#{produto.quantidade}" size="10" rendered="#{produto.editable}" />
+                    <h:outputText value="#{produto.quantidade}" rendered="#{not produto.editable}"/>
+                </h:column>
+                 <h:column>
+                    <f:facet name="header"><i class="fa fa-cog" aria-hidden="true"></i>
+Gerênciar</f:facet>
+                     <h:commandButton class="btn btn-danger" value="Deletar " action="#{produtoController.apagarPorId(produto.idproduto)}"/>
+                     <h:outputLabel value=" &nbsp; | &nbsp; "/>
+                     <h:commandLink value="Editar" class="btn btn-primary" action="#{produtoController.editAction(produto)}" rendered="#{not funcionario.editable}"/>
+                </h:column>
+            </h:dataTable>  
+            <h:commandButton value="Salvar Alteração" class="btn btn-success" action="#{produtoController.saveAction()}" />
+        </h:form>
+                    <ui:include src="_footer.xhtml"></ui:include>     
+
+    </h:body>
+</html>

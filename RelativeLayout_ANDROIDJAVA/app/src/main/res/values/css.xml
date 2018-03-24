@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="estiloBtn">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#1FAAF4</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="estiloBtnCadastro">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#1F2AF4</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    estiloBtnCadastro
+</resources>

@@ -1,0 +1,28 @@
+package labels;
+
+import javax.swing.*;
+
+public class labels {
+	public static void main (String [] args){
+		int i;
+		
+		JFrame frame = new JFrame("FRAME");
+		frame.setSize(500, 500);
+		frame.setLocation(500, 100);
+		
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		
+		for(i=0;i<=500;i++){
+			
+			JLabel label = new JLabel("Label " + i );
+			panel.add(label);
+		}
+
+		//frame.pack();
+		frame.setVisible(true);
+
+		
+
+}
+}

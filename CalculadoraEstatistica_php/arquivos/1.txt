@@ -1,0 +1,49 @@
+Nome do Autor: 
+Objetivo do Trabalho: 
+
+Dados Brutos: 10;30;50;80;90;70;20
+Total de Números: 7
+Média: 50.00
+Moda: 10
+Mediana: 80 (posição 4)
+Rol: 10;20;30;50;70;80;90
+
+Quartils 
+Q1 : 20
+Q2 : 50
+Q3 : 80
+
+
+Quintils 
+K1 : 20
+K2 : 30
+K3 : 70
+K4 : 80
+
+
+Decils 
+D1 : 10
+D2 : 20
+D3 : 30
+D4 : 30
+D5 : 50
+D6 : 70
+D7 : 70
+D8 : 80
+D9 : 90
+
+
+Tabela de Classes: 
+Classe - Intervalo - Fi - Fi(Ac) - Xi - Xi(Ac)
+1 - 10 |--- 36.67 - 3 - 3 - 42.85 - 42.85
+2 - 36.67 |--- 63.34 - 1 - 4 - 14.29 - 57.14
+3 - 63.34 |---| 90 - 3 - 7 - 42.86 - 100
+
+
+Amplitude Total: 80 
+Desvio Médio Simples: 25.71 
+Variança: 828.57 
+Desvio Padrão: 28.78 
+
+Medidas de Assimetria: Distribuição Assimétrica Positiva (á Direita : 1.39)
+Medidas de Curtose: Distribuição Platicúrtica (0.38)

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RelativeLayout</string>
+    <string name="labelNome">Nome: </string>
+    <string name="labelCpf">CPF: </string>
+    <string name="labelRg">RG: </string>
+    <string name="labelEndereco">Endereço: </string>
+    <string name="labelNascimento">Data de Nascimento: </string>
+    <string name="labelSexo">Sexo: </string>
+    <string name="radioMasculino">Masculino</string>
+    <string name="radioFeminino">Feminino</string>
+    <string name="labelCadastrar">Cadastrar</string>
+</resources>

@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02/04/2017, 14:21:24
+    Author     : berson
+*/
+html,body{
+    height: 100%;
+}
+body{
+    background-color: #f6f6f6;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+.topo{
+    background-color: #00897b;
+    width: 100%;
+    text-align: center;
+    color: #f6f6f6;
+
+}
+.Login-form{
+    width: 25%;
+    height: 25rem;
+    position: absolute;
+    left: 38%;
+    top: 30%;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 3.7rem;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+
+}
+.Login-form > p{
+    text-align: center;
+    font-size: 3rem;
+
+}
+.Login-form > input{
+    margin-bottom: .5rem;
+}
+
+.footer{
+    background-color: #00897b;
+    color: #f6f6f6;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    padding-bottom: 5rem;
+}
+.footer > P{
+    padding-top: 1.5rem;
+    padding-left: .9rem;
+}
+.nomeEstabelecimento{
+    font-family: 'Open Sans', sans-serif;  
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+.sloganEstabelecimento{
+    font-family: 'Open Sans', sans-serif;  
+    font-size: 2rem;
+    margin-top: -2rem;
+}
+

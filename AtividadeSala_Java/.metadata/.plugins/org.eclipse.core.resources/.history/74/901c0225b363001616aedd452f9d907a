@@ -1,0 +1,30 @@
+package Asc;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Asc {
+	public static void main (String [] args){
+		
+		
+		JFrame frame = new JFrame("FRAME");
+		frame.setSize(500, 500);
+		frame.setLocation(500, 100);
+		
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		
+		
+			
+			JLabel label = new JLabel("C:\\ABAAAfv5sAA-0.jpg");
+			panel.add(label);
+	
+
+		//frame.pack();
+		frame.setVisible(true);
+
+		
+
+}
+}

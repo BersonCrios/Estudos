@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="_CSS/estilo.css">
+        <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">-->
+        <title>Canvas</title>
+    </head>
+
+    <body onload="initi()">
+        <canvas id="meuCanvas" height="300px" width="500px"></canvas>    
+
+        <script>
+
+            function gameLoop()
+            {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.beginPath();
+                context.arc(bolaPosX, bolaPosY, bolaDiametro, 0, Math.PI * 2, true);
+                context.fill();
+                context.fillRect(jogadorPosicaoX, canvas.height - barraAltura, barraLargura, barraAltura);
+
+                 if(bolaPosY <= meuCanvas.height) {
+                     bolaPosY += velocidadeBola;
+                 }
+                 else{
+                     bolaPosX = Math.random() * 600;
+                     bolaPosY = -10;
+                     colisao = false;
+                 }
+
+                 if((bolaPosX > jogadorPosicaoX && bolaPosX < jogadorPosicaoX + barraLargura) && bolaPosY >= canvas.height - barraAltura && colisao == false)
+                {
+                    pontosJogador++;
+                    colisao = true;
+                }
+
+                context.font = "32pt Tahoma";
+                context.fillText(pontosJogador, canvas.width - 70, 50);              
+            }
+
+            var barraAltura, barraLargura, jogadorPosicaoX, velocidadeJogador,bolaPosX, bolaPosY, velocidadeBola,pontosJogador,colisao;
+
+        
+            function initi()
+            {
+
+                  barraAltura = 15;
+                  barraLargura = 90;
+
+                  bolaDiametro = 10;
+                  bolaPosX = meuCanvas.width / 2;
+                  bolaPosY = -10;
+                  velocidadeBola = 10;                          
+             
+                  pontosJogador = 0;
+
+                  colisao = false;
+
+                  jogadorPosicaoX = (meuCanvas.width - barraLargura) / 2;
+                  velocidadeJogador = 60;
+
+                  canvas = document.getElementById("meuCanvas");
+                  context = canvas.getContext("2d");                             
+               
+
+                  document.addEventListener('keydown', keyDown); //element.addEventListener(event, function, useCapture) 
+
+                   setInterval(gameLoop, 30);
+            }
+
+            function keyDown(evento){
+                if(evento.keyCode == 37){
+                    if(jogadorPosicaoX > 0){
+                         jogadorPosicaoX = jogadorPosicaoX - velocidadeJogador;
+                    }
+                }
+                if(evento.keyCode == 39){
+                    if(jogadorPosicaoX < (canvas.width - barraLargura)){
+                         jogadorPosicaoX = jogadorPosicaoX + velocidadeJogador;
+                    }
+                }
+            }
+         </script>   
+    </body>        
+</html>

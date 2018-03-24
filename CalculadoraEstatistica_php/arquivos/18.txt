@@ -1,0 +1,47 @@
+Nome do Autor: 
+Objetivo do Trabalho: 
+
+Dados Brutos: 1
+Total de Números: 1
+Média: 1.00
+Moda: 1
+Mediana: 1 (posição 1)
+Rol: 1
+
+Quartils 
+Q1 : 1
+Q2 : 1
+Q3 : 1
+
+
+Quintils 
+K1 : 1
+K2 : 1
+K3 : 1
+K4 : 1
+
+
+Decils 
+D1 : 1
+D2 : 1
+D3 : 1
+D4 : 1
+D5 : 1
+D6 : 1
+D7 : 1
+D8 : 1
+D9 : 1
+
+
+Tabela de Classes: 
+Classe - Intervalo - Fi - Fi(Ac) - Xi - Xi(Ac)
+1 - 1 |---| 1 - 1 - 1 - 100 - 100
+
+
+Amplitude Total: 0 
+Desvio Médio Simples: 0.00 
+Variança: 0.00 
+Desvio Padrão: 0.00 
+
+Medidas de Assimetria: Distribuição Simétrica (0.00)
+Medidas de Curtose: Distribuição Leptocúrtica (0.00)

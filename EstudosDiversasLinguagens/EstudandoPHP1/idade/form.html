@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercicio</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+  <div>
+    <!-- Ler nome, ano de nascimento e sexo de uma pessoa, mostrar sua idade atual -->
+    <form action="values.php" method="post">
+          <h3>Verificador de idade Atual!!!</h3>
+        Nome: <input type="text" name="nome"> <br/>
+        Ano atual: <input type="number" name="ano_atual"><br/>
+        Ano de Nascimento: <input type="number" name="ano_nasc"><br/>
+
+        <fieldset><legend>Sexo</legend>
+            <input type="radio" name="sexo" value="Homen">
+            <label for="m">Masculino</label>
+            <input type="radio" name="sexo" value="Mulher">
+            <label for="f">Feminino</label>
+        </fieldset>
+        <button type="submit" name="Verificar">Verificar!!!</button>
+    </form>
+  </div>
+</body>
+</html>

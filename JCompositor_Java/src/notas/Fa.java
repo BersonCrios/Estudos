@@ -1,0 +1,12 @@
+package notas;
+
+import principal.Nota;
+
+public class Fa implements Nota {
+
+	@Override
+	public String simbolo() {
+		return "F";
+	}
+
+}

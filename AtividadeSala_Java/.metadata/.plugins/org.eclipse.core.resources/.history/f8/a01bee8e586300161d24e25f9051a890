@@ -1,0 +1,33 @@
+package tab;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class tab {
+	
+	public int tab() {
+		int x = 10;
+		return x;
+	}
+	public static void main (String [] args){
+
+		
+		JFrame frame = new JFrame("FRAME");
+		frame.setSize(500, 500);
+		frame.setLocation(500, 100);
+		
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		int z;
+		for(int i = 0; i< 9; i++){
+			z = 1+i;
+			JLabel label = new JLabel(String.valueOf(z));
+			panel.add(label);
+		}
+
+		//frame.pack();
+		frame.setVisible(true);		
+
+}
+}

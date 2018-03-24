@@ -1,0 +1,14 @@
+%sombra-padrao{
+  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+
+%image-replacements {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+
+@import "compass/css3";
+@import "compass/utilities";

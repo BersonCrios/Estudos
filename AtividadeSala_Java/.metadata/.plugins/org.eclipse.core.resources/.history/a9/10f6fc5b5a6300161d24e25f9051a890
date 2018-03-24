@@ -1,0 +1,26 @@
+package Asc;
+ 
+
+public class Asc extends javax.swing.JFrame {
+ 
+   Asc background = null;
+ 
+   public Asc() {
+      super.setSize(915,595);
+      super.setTitle("Programando J@! - A Programação eficiente!");
+      super.setLocationRelativeTo(null); // para ficar centralizada
+ 
+      // o caminho da imagem é passado na instância do objeto:
+      // lembre-se de passar o caminho da sua imagem no disco, porque, caso contrário,
+      // vai dar erro na execução
+      background = new Asc ();
+      background.setSize(900, 559);
+      getContentPane().add(background);
+   }
+ 
+   public static void main(String args[]) {
+      Asc Asc = new Asc ();
+      Asc .setVisible(true);
+      Asc .setDefaultCloseOperation(EXIT_ON_CLOSE);
+   }
+}

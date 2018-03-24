@@ -1,0 +1,6 @@
+@mixin borda-arredondada($raio: 0.3em) {
+  -webkit-border-radius: $raio;
+  -moz-border-radius: $raio;
+  -o-border-radius: $raio;
+  border-radius: $raio;
+}
