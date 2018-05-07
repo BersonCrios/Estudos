@@ -1,0 +1,28 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<div class="menu">
+		<h:form>
+			<p:menubar>
+				<p:menuitem value="Inicio" ajax="false" url="/pages/inicio.xhtml"
+					icon="fa fa-home" />
+
+				<p:menuitem value="NFE" ajax="false" 
+				url="/pages/nfe.xhtml"/>
+
+				<p:menuitem value="Produto" ajax="false"
+				 url="/pages/produto.xhtml"/>
+
+				<p:menuitem value="Lista Nfes" ajax="false"
+					url="/pages/listagemnfes.xhtml"/>
+
+				<p:menuitem value="Baixar NFE" ajax="false"
+					url="/pages/baixarNota.xhtml" />
+
+				<p:menuitem value="Lista Produtos" ajax="false"
+					url="/pages/listagemprodutos.xhtml"/>
+			</p:menubar>
+		</h:form>
+	</div>
+</ui:composition>

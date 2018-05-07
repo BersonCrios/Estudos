@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
+	<ui:define name="conteudo">
+		<f:view>
+			<center>
+				<h:form id="form">
+					<p:panel id="panel">
+						<h:commandLink>
+							<p:fileDownload value="#{notaFiscalController.relatorio.pdf}" />
+							<p:graphicImage height="600px" library="images" name="pdf.png"
+								title="Imprimir PDF" />
+						</h:commandLink>
+					</p:panel>
+				</h:form>
+			</center>
+		</f:view>
+	</ui:define>
+</ui:composition>
